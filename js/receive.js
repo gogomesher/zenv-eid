@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 	try {
 		const go = new Go();
-		const response = await fetch('https://cdn.zionfhe.ai/zenv/sha256.wasm');
+		const response = await fetch('js/sha256.wasm');
 		const buffer = await response.arrayBuffer();
 		const result = await WebAssembly.instantiate(buffer, go.importObject);
 		go.run(result.instance);
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 		// Get form values
 		const envelopeId = document.getElementById('envelope-id').value;
 		const password = document.getElementById('password').value;
-		const pkbResponse = await fetch('https://cdn.zionfhe.ai/zenv/pkb');
+		const pkbResponse = await fetch('js/pkb');
 		const pkbBuffer = await pkbResponse.arrayBuffer();
 		const pkbContent = new Uint8Array(pkbBuffer);
 		const hashedPassword = "0x" + goSha256(password, pkbContent);
