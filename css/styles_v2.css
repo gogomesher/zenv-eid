@@ -3,6 +3,7 @@
 :root {
     /* Dark Mode Color Palette */
     --primary-color: #6366f1;
+    --nav-color: #ea3939;
     /* Indigo */
     --primary-hover: #4f46e5;
     --secondary-color: #1f2937;
@@ -127,7 +128,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: var(--primary-color);
+    color: var(--nav-color);
 }
 
 /* Main Card */
